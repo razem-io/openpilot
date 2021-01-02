@@ -39,11 +39,17 @@ class CarInterface(CarInterfaceBase):
       ret.wheelbase = 2.705
       ret.centerToFront = ret.wheelbase * 0.44
       ret.steerRatio = 17
-    elif candidate in [CAR.LEAF, CAR.LEAF_2_ZERO]:
+    elif candidate == CAR.LEAF:
       ret.mass = 1610 + STD_CARGO_KG
       ret.wheelbase = 2.705
       ret.centerToFront = ret.wheelbase * 0.44
       ret.steerRatio = 17
+    elif candidate == CAR.LEAF_2_ZERO:
+      ret.mass = 1176 + STD_CARGO_KG
+      ret.wheelbase = 2.700
+      ret.centerToFront = ret.wheelbase * 0.44
+      ret.steerRatio = 17
+
 
     ret.steerControlType = car.CarParams.SteerControlType.angle
     ret.radarOffCan = True
